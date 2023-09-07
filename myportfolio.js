@@ -23,3 +23,8 @@ function clearLetters(){
     }
 }
 typeLetters()
+
+
+function changeToDarkMode(){
+    
+}
