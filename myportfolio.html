@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="myportfolio.css">
+    <link rel="stylesheet" href="icofont/icofont.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="w-full">
+    <main>
+        <nav class="w-full shadow-md px-20 py-3 flex justify-between items-center">
+            <img src="portfolio images and icon/Screenshot (14).png" id="logo" alt="logo">
+            <div class="flex items-center gap-20">
+                <i class="icofont-moon bg-white p-2 rounded-full dark-mode"></i>
+                <ul class="text-white flex gap-16 font-medium">
+                    <li>Home</li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <section class="home px-20 py-20 w-full flex justify-between items-start">
+            <div class="left-home flex-grow">
+                <div>
+                    <p class="hi">Hi there!</p>
+                    <p class="job-des">I'm a <span id="change-text"></span></p>
+                </div>
+                <div>
+                    <p id="home-abt">I'm <b>Bamidele Taofikat</b>, a Web developer with a knack for crafting user-centric designs. Let's turn your ideas into captivating web experiences!</p>
+                </div>
+                <div class="btn-div mt-6">
+                    <button class="hire-btn text-white px-10 py-3 rounded">HIRE ME</button>
+                    <button class="view-btn px-10 py-3 rounded">VIEW RESUME</button>
+                </div>
+                <div class="socials-div flex gap-6 items-center mt-6">
+                    <img src="portfolio images and icon/linkin.png" class="socials-icon" alt="">
+                    <img src="portfolio images and icon/twitter.png" class="socials-icon" alt="">
+                    <img src="portfolio images and icon/tik.png" class="socials-icon" alt="">
+                    <img src="portfolio images and icon/github.png" class="socials-icon" alt="">
+                </div>
+            </div>
+            <div class="right-home w-1/2">
+                <img src="portfolio images and icon/WhatsApp Image 2023-08-09 at 12.46.20 PM.jpeg" class="home-img" alt="">
+            </div>
+        </section>
+        <section id="about" class="w-full flex justify-between items-start px-20 py-20">
+            <div class="left-abt flex-grow">
+                <p class="abt-me">About Me</p>
+                <p class="abt-me-tx">
+                    I'm Bamidele Taofikat, a microbiologist turned frontend developer with clear skills in product design. My journey from the world of science to technology has cultivated a unique blend of analytical thinking and creative problem-solving. With a passion for crafting user-centric design and turning ideas into interactive web experiences, I bring a fresh perspective to every project. Let's collaborate and bring your ideas to life.
+                </p>
+                <p class="abt-me mt-4 mb-2">My Skill Set</p>
+                <ul class="abt-li flex gap-6">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Tailwindcss</li>
+                    <li>Bootstrap</li>
+                    <li>Figma</li>
+                    <li>Javascript</li>
+                    <li>Git/Github</li>
+                </ul>
+            </div>
+            <div class="right-abt w-1/2">
+                <img src="portfolio images and icon/WhatsApp Image 2023-08-09 at 12.46.20 PM.jpeg" class="home-img" alt="">
+            </div>
+        </section>
+        <section id="projects" class="w-full px-20 py-20">
+            <p class="abt-me mb-3">Projects</p>
+            <div class="flex items-start flex-wrap justify-center gap-10">
+                <div class="projects-container">
+                    <img src="portfolio images and icon/new netflix.jpg" alt="" class="projects-card">
+                    <a href="https://github.com/taocodeux/netflix-landingpage">
+                        <div class="image-overlay">
+                            <p class="description">NETFLIX</p>
+                            <p class="description">HTML/CSS</p>
+                        </div>
+                    </a>
+                </div>           
+                <div class="projects-container">
+                    <img src="portfolio images and icon/piggy.png" alt="" class="projects-card">
+                    <a href="https://github.com/taocodeux/piggyvestclone">
+                        <div class="image-overlay">
+                            <p class="description">PIGGYVEST></p>
+                            <p class="description">HTML/CSS/JS/BS</p>
+                        </div>
+                    </a>
+                </div>
+               <div class="projects-container">
+                    <img src="portfolio images and icon/twitterscreen.png" alt="" class="projects-card">
+                    <a href="https://github.com/taocodeux/twitterclone">
+                        <div class="image-overlay">
+                            <p class="description">TWITTER></p>
+                            <p class="description">HTML/CSS</p>
+                        </div>
+                    </a>
+               </div>
+               <div class="projects-container">
+                    <img src="portfolio images and icon/gradecal.png" alt="" class="projects-card">
+                    <div class="image-overlay">
+                        <p class="description">GRADE CALCULATOR APP</p>
+                        <p class="description">HTML/CSS/JS</p>
+                    </div>
+               </div>
+               <div class="projects-container">
+                    <img src="portfolio images and icon/instagram.png" alt="" class="projects-card">
+                    <div class="image-overlay">
+                        <p class="description">INSTAGRAM APP></p>
+                        <p class="description">HTML/CSS/JS</p>
+                    </div>
+               </div>
+               <div class="projects-container">
+                    <img src="portfolio images and icon/cal.png" alt="" class="projects-card">
+                    <div class="image-overlay">
+                        <p class="description">CALCULATOR APP></p>
+                        <p class="description">HTML/CSS/jS</p>
+                    </div>
+               </div>
+            </div>
+        </section>
+        <section id="contact" class="w-full px-20 py-20 flex flex-col justify-center items-center">
+            <p class="abt-me">Contact Me</p>
+            <div class="socials-div flex gap-6 items-center mt-6">
+                <img src="portfolio images and icon/linkin.png" class="socials-icon" alt="">
+                <img src="portfolio images and icon/twitter.png" class="socials-icon" alt="">
+                <img src="portfolio images and icon/tik.png" class="socials-icon" alt="">
+                <img src="portfolio images and icon/github.png" class="socials-icon" alt="">
+            </div>
+        </section>
+        <footer>
+            &copy;2023 <span>Taocodeux</span>
+        </footer>
+    </main>
+    <script src="myportfolio.js"></script>
+</body>
+</html>
