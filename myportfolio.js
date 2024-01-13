@@ -3,6 +3,7 @@ let wordsArr = ["Web-Developer", "Product-Designer"]
 let currentLetterIndex = 0
 let currentWordIndex = 0
 let typingSpeed = 100
+
 function typeLetters(){
     if (currentLetterIndex < wordsArr[currentWordIndex].length){
         changeText.innerText += wordsArr[currentWordIndex][currentLetterIndex]
@@ -23,6 +24,19 @@ function clearLetters(){
     }
 }
 typeLetters()
+
+let myDropDown = document.getElementById("dropDrown")
+let myHamburger = document.getElementById("hamburger")
+
+function openDropDown() {
+    var myDropDown = document.getElementById("myDropDown");
+
+    if (myDropDown.style.display === "none") {
+        myDropDown.style.display = "block";
+    } else {
+        myDropDown.style.display = "none";
+    }
+}
 
 
 function changeToDarkMode(){

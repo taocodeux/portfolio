@@ -1,8 +1,12 @@
 *{
     padding: 0;
     margin: 0;
+    /* overflow-x: hidden; */
     box-sizing: border-box;
     scroll-behavior: smooth;
+}
+main{
+    overflow-x: hidden;
 }
 nav{
     background-color: #B2B4B2;
@@ -10,9 +14,13 @@ nav{
     top: 0;
     left: 0;
     z-index: 3;
+    padding-left: 5rem;
+    padding-right: 5rem;
 }
 .home{
     background-color: #B2B4B2;
+    padding-left: 5rem;
+    padding-right: 5rem;
 }
 #logo{
     width: 80px;
@@ -20,13 +28,14 @@ nav{
     border-radius: 50%;
     border: 7px solid #8A6A6A;
 }
-ul li{
+.nav-li{
     font-size: 18px;
     color: #575E59;
     position: relative;
     text-align: none;
+    display: block;
 }
-ul li::after{
+.nav-li::after{
     content: "";
     position: absolute;
     bottom: 0;
@@ -38,7 +47,7 @@ ul li::after{
     transform-origin: bottom right;
     transition: transform 0.3s ease;
 }
-ul li:hover::after{
+.nav-li:hover::after{
     transform: scaleX(1);
     transform-origin: bottom left;
 }
@@ -54,7 +63,7 @@ ul li:hover::after{
 #home-abt{
     font-size: 22px;
     color: #575E59;
-    width: 60%;
+    width: 80%;
 }
 .home-img{
     border-radius: 10%;
@@ -99,6 +108,8 @@ ul li:hover::after{
 }
 #about{
     background-color: #eaebea;
+    padding-left: 5rem;
+    padding-right: 5rem;
 }
 .abt-me{
     color: #8A6A6A;
@@ -121,6 +132,8 @@ ul li:hover::after{
 }
 #projects{
     background-color: #B2B4B2;
+    padding-left: 5rem;
+    padding-right: 5rem;
 }
 .projects-card{
     width: 100%;
@@ -162,6 +175,8 @@ ul li:hover::after{
 }
 .contact{
     background-color: #eaebea;
+    padding-left: 5rem;
+    padding-right: 5rem;
 }
 footer{
     width: 100%;
@@ -176,6 +191,104 @@ footer{
 .contact-us{
     width: 100px;
     height: 100px;
+}
+/* .right-home{
+    width: 50%;
+    height: 50%;
+    border: 1px solid blue;
+    background-color: red;
+    /* color: blue; */
+/* } */
+#rightHome{
+    border: 1px solid #8A6A6A;
+    width: 370px;
+    height: 370px;
+    border-radius: 50%;
+    position: relative;
+    filter: blur();
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.firstPix{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: -200px;
+    align-items: center;
+    left: 20px;
+}
+.hamburger{
+    display: none;
+    font-size: 25px;
+}
+.drop-downnav{
+    display: none;
+    width: 100%;
+    height: auto;
+    background-color: #ffffff86;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+    /* padding-top: -50px; */
+    /* top: -20px; */
+}
+.drop-downnavnav{
+    /* display: none; */
+    width: 100%;
+    height: auto;
+    /* background-color: #ffffff86; */
+    /* position: absolute; */
+    right: 0;
+    top: 0;
+    /* padding-left: 2rem; */
+    /* padding-right: 2rem; */
+    /* padding-top: -50px; */
+    /* top: -20px; */
+}
+.close{
+    font-size: 25px;
+}
+
+
+
+
+
+
+
+@media (max-width: 363px) {
+    .nav-li{
+        display: none;
+    }
+    nav{
+        /* display: flex; */
+        /* justify-content: space-between; */
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .hamburger{
+        display: block;
+    }
+    .home{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .about{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .projects{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .contact{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    /* .drop-downnav{
+        display: block;
+    } */
 }
 
 
