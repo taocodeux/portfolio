@@ -1,98 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Responsive Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
-
-        nav {
-            background-color: #444;
-            padding: 10px;
-            text-align: center;
-            display: none;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            padding: 10px;
-            margin: 0 10px;
-            display: inline-block;
-        }
-
-        main {
-            padding: 20px;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        @media only screen and (max-width: 600px) {
-            nav a {
-                display: block;
-                margin: 5px 0;
-            }
-
-            nav {
-                display: block;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frontend Developer Portfolio</title>
+<link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <header>
-        <h1>Simple Responsive Website</h1>
-    </header>
 
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-    </nav>
+<header>
+    <div class="container">
+        <h1>John Doe</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-    <main>
-        <h2>Welcome to our website!</h2>
-        <p>This is a simple responsive website created using HTML, CSS, and JavaScript.</p>
-    </main>
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h2>Welcome to my portfolio</h2>
+                <p>I am a frontend developer passionate about creating beautiful and functional websites.</p>
+            </div>
+            <div class="hero-image">
+                <img src="random-image.jpg" alt="Random Image">
+            </div>
+        </div>
+    </div>
+</section>
 
-    <footer>
-        &copy; 2023 Simple Responsive Website
-    </footer>
+<section id="about" class="about-section">
+    <div class="container">
+        <h2>About Me</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et accumsan lorem. Aenean vitae justo eu justo consequat fermentum.</p>
+    </div>
+</section>
 
-    <script>
-        // JavaScript to toggle the navigation menu
-        function toggleNav() {
-            var nav = document.querySelector('nav');
-            if (nav.style.display === 'block') {
-                nav.style.display = 'none';
-            } else {
-                nav.style.display = 'block';
-            }
-        }
-    </script>
+<section id="portfolio" class="portfolio-section">
+    <div class="container">
+        <h2>Portfolio</h2>
+        <div class="portfolio-items">
+            <!-- Your portfolio items here -->
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact-section">
+    <div class="container">
+        <h2>Contact Me</h2>
+        <p>Email: john@example.com</p>
+        <p>Phone: 123-456-7890</p>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 John Doe - Frontend Developer</p>
+    </div>
+</footer>
+
 </body>
-
 </html>

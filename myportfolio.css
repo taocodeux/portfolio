@@ -4,6 +4,7 @@
     /* overflow-x: hidden; */
     box-sizing: border-box;
     scroll-behavior: smooth;
+    /* outline: 2px solid red; */
 }
 main{
     overflow-x: hidden;
@@ -192,29 +193,44 @@ footer{
     width: 100px;
     height: 100px;
 }
-/* .right-home{
-    width: 50%;
-    height: 50%;
-    border: 1px solid blue;
-    background-color: red;
-    /* color: blue; */
-/* } */
 #rightHome{
-    border: 1px solid #8A6A6A;
-    width: 370px;
-    height: 370px;
-    border-radius: 50%;
+    /* border: 1px solid #8A6A6A; */
+    /* width: 50%; */
+    /* height: 50%; */
+    /* border-radius: 50%; */
     position: relative;
-    filter: blur();
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /* filter: blur();
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
+    /* background-color: red; */
+}
+.profile-circle{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 500px; 
+    height: 530px; 
+    border-radius: 50%;
+    background-color: #8a6a6a59; 
+    z-index: 1;
+    filter: blur(30px);
+    left: 320px;
+    top: 200px;
+
 }
 .firstPix{
     position: absolute;
     width: 100%;
-    height: auto;
-    top: -200px;
-    align-items: center;
-    left: 20px;
+    height: 930px;
+    /* border-radius: 0 0 20% 20%; */
+    /* top: -380px; */
+    transform: translate(-50%, -50%);
+    /* align-items: center; */
+    /* left: 20px; */
+    /* border-bottom: 1px solid #8A6A6A; */
+    /* border-radius: 50%; */
+    object-fit: cover;
+    z-index: 2;
+    left: 350px;
+
 }
 .hamburger{
     display: none;
@@ -250,6 +266,7 @@ footer{
 .close{
     font-size: 25px;
 }
+
 
 
 
