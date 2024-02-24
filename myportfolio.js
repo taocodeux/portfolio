@@ -25,18 +25,18 @@ function clearLetters(){
 }
 typeLetters()
 
-let myDropDown = document.getElementById("dropDrown")
-let myHamburger = document.getElementById("hamburger")
+// let myDropDown = document.getElementById("dropDrown")
+// let myHamburger = document.getElementById("hamburger")
 
-function openDropDown() {
-    var myDropDown = document.getElementById("myDropDown");
+// function openDropDown() {
+//     var myDropDown = document.getElementById("myDropDown");
 
-    if (myDropDown.style.display === "none") {
-        myDropDown.style.display = "block";
-    } else {
-        myDropDown.style.display = "none";
-    }
-}
+//     if (myDropDown.style.display === "none") {
+//         myDropDown.style.display = "block";
+//     } else {
+//         myDropDown.style.display = "none";
+//     }
+// }
 
 
 function changeToDarkMode(){
