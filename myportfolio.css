@@ -11,7 +11,7 @@
 :root{
     --reddishbrown: #8A6A6A;
     --ashblack: #59605B;
-    --lightblack: #313131;
+    --lightblack: #313131; 
 }
 main{
     overflow-x: hidden;
@@ -22,8 +22,7 @@ nav{
     top: 0;
     left: 0;
     z-index: 3;
-    padding-left: 5rem;
-    padding-right: 5rem;
+    padding: 1.5rem 5rem 1.5rem 5rem;
 }
 .home{
     background-color: #B2B4B2;
@@ -31,6 +30,7 @@ nav{
     /* padding-right: 5rem; */
     padding: 4rem 5rem 0 5rem;
     height: 100vh;
+    overflow: hidden;
 }
 .logo{
     color: var(--ashblack);
@@ -42,7 +42,8 @@ nav{
 }
 .nav-li{
     font-size: 18px;
-    color: #575E59;
+    font-weight: 600;
+    color: var(--ashblack);
     position: relative;
     text-align: none;
     display: block;
@@ -311,48 +312,43 @@ figcaption{
     display: none;
     font-size: 25px;
 }
-/* .drop-downnav{
+.hidden-dd{
     display: none;
+    position: fixed;
+    background-color: var(--reddishbrown);
     width: 100%;
-    height: auto;
-    background-color: #ffffff86;
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-bottom: 2rem; */
-    /* padding-top: -50px; */
-    /* top: -20px; */
-/* } */
-/* .mobile-nav{
-    display: none;
-    width: 100%;
-    height: auto;
-    /* background-color: #ffffff86; */
-    /* position: absolute; */
-    /* right: 0; */
-    /* top: 0; */ */
-    /* padding-left: 2rem; */
-    /* padding-right: 2rem; */
-    /* padding-top: -50px; */
-    /* top: -20px; */
-/* }
-#close{ */
-    /* font-size: 25px;
-    text-align: right;
-    display: none;
-} */
-/* .hidden-dd{
+    height: 100vh;
+    /* opacity: 80%; */
+    padding: 30px;
+   z-index: 3;
+   transition: all 0.3s ease-out;
+}
+.hidden-li{
     display: flex;
     flex-direction: column;
-} */
+    padding: 30px;
+    color: var(--lightblack);
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+        /* position: relative; */
+}
+.hidden-li:hover{
+    color: #fff;
+    font-size: 20px;
+}
+.close-icon{
+    /* padding: 30px; */
+    font-size: 25px;
+}
+
+
+/* keyframe for the wave emoji */
 @keyframes twoFrames {
     50% {
         content: var(--emoji);
     }
 }
-
 @keyframes threeFrames {
     33.333% {
         content: var(--emoji-1);
@@ -362,17 +358,18 @@ figcaption{
         content: var(--emoji-2);
     }
 }
-
-
-
-
-
-
-@media screen and (max-width:500px) {
-    
+/* emoji usage */
+.animated-element::before {
+    animation: twoFrames 2s infinite;
+}
+.animated-element::after {
+    animation: threeFrames 3s infinite;
 }
 
-@media screen and (max-width: 600px) {
+
+
+/* responsiveness for phones and small screens */
+@media screen and (min-width: 320px) and (max-width: 480px) {
     .nav-li{
         display: none;
     }
@@ -408,6 +405,15 @@ figcaption{
     /* .drop-downnav{
         display: block;
     } */
+}
+
+/* responsiveness for tablets and medium screens */
+@media screen and (min-width: 481px) and (max-width: 1024px){
+
+}
+/* responsiveness for desktop and large screens */
+@media screen and (min-width:1025px) {
+    
 }
 
 

@@ -12,13 +12,13 @@
 <body class="w-full">
     <main>
         <head>
-            <nav class="w-full shadow-md py-5 flex justify-between items-center">
-                <p class="logo">Tao<span class="colored-logo">Codeux</span></p>
-                <div>
+            <nav class="w-full shadow-md flex justify-between items-center" id="nav">
+                <p class="logo" id="logo">Tao<span class="colored-logo">Codeux</span></p>
+                <div id="moon">
                     <i class="icofont-moon bg-white p-2 rounded-full dark-mode" onclick="changeToDarkMode()"></i>
                 </div>
                 <div class="flex items-center gap-20">
-                    <ul class="text-white flex gap-16 font-medium">
+                    <ul class="flex gap-16">
                         <li class="nav-li"><a href="#home">Home</a></li>
                         <li class="nav-li"><a href="#about">About</a></li>
                         <li class="nav-li"><a href="#projects">Projects</a></li>
@@ -31,8 +31,19 @@
                 </div>
                 <p class="close"><i class="icofont-ui-close"></i></p>
             </nav>
+            <div class="hidden-dd" id="hidden-dd">
+                <span class="close-icon" id="close" onclick="closeDropDown()"><i class="icofont-close"></i></span>
+                <ul>
+                    <li class="hidden-li"><a href="#home">Home</a></li>
+                    <li class="hidden-li"><a href="#about">About</a></li>
+                    <li class="hidden-li"><a href="#projects">Projects</a></li>
+                    <li class="hidden-li"><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
         </head>
-        <section id="home" class="home w-full flex justify-between items-start">
+        <!-- nav finished here -->
+        <!-- home section starts here -->
+        <section id="home" class="home w-full flex justify-between  items-start">
             <div class="left-home flex-grow w-1/2">
                 <p class="hiya">Hiya!<span class="emoji wave" role="img" aria-label="hand wave"></span></p>
                 <p class="job-des">I'm a <span class="boldName">Bamidele Badmus</span></p>
@@ -54,6 +65,8 @@
                 <img src="portfolio images and icon/firstpix-removebg-preview.png" alt="" class="firstPix">
             </div>
         </section>
+        <!-- home section ends here -->
+        <!-- about section starts here -->
         <section id="about" class="w-full flex justify-between items-start py-20">
             <div class="left-abt flex-grow">
                 <p class="abt-me">About Me</p>
@@ -107,6 +120,8 @@
                 <img src="portfolio images and icon/WhatsApp Image 2023-08-09 at 12.46.20 PM.jpeg" class="home-img" alt="">
             </div>
         </section>
+        <!-- about section ends here -->
+        <!-- projects section starts here -->
         <section id="projects" class="w-full py-20">
             <p class="abt-me mb-3">Projects</p>
             <div class="flex items-start flex-wrap justify-center gap-10">
@@ -166,6 +181,8 @@
                </div>
             </div>
         </section>
+        <!-- projects section ends here -->
+        <!-- contact section starts here -->
         <section id="contact" class="w-full py-20 flex flex-col justify-center items-center">
             <p class="abt-me">Contact Me</p>
             <div class="socials-div flex gap-6 items-center mt-6">
@@ -179,9 +196,12 @@
                 <figcaption>~Anonymous</figcaption>
             </div>
         </section>
+        <!-- contact section ends here -->
+        <!-- footer section starts here -->
         <footer>
             &copy;2023 <span>TaoCodeUx</span>
         </footer>
+        <!-- footer section ends here -->
     </main>
     <script src="myportfolio.js"></script>
 </body>
