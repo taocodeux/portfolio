@@ -62,9 +62,9 @@ function closeDropDown(){
         myDropDown.style.display = "block"
     }
 }
+//open resume
+let viewBtn =document.getElementById("view-btn")
 
-// block to chnage to darkmode
-
-function changeToDarkMode(){
-    
+function openResume(){
+    window.open("portfolio images and icon/Badmus Tech CV.pdf", "_blank")
 }

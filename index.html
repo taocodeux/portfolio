@@ -13,11 +13,11 @@
     <main>
         <head>
             <nav class="w-full shadow-md flex justify-between items-center" id="nav">
-                <p class="logo" id="logo">Tao<span class="colored-logo">Codeux</span></p>
+                <p class="logo">Tao<span class="colored-logo">Codeux</span></p>
                 <div id="moon">
-                    <i class="icofont-moon bg-white p-2 rounded-full dark-mode" onclick="changeToDarkMode()"></i>
+                    <i class="icofont-moon bg-white p-2 rounded-full" onclick="changeToDarkMode()"></i>
                 </div>
-                <div class="flex items-center gap-20">
+                <div class="web-li flex items-center gap-20">
                     <ul class="flex gap-16">
                         <li class="nav-li"><a href="#home">Home</a></li>
                         <li class="nav-li"><a href="#about">About</a></li>
@@ -43,15 +43,15 @@
         </head>
         <!-- nav finished here -->
         <!-- home section starts here -->
-        <section id="home" class="home w-full flex justify-between  items-start">
-            <div class="left-home flex-grow w-1/2">
+        <section id="home" class="w-full justify-between  items-start">
+            <div class="left-home">
                 <p class="hiya">Hiya!<span class="emoji wave" role="img" aria-label="hand wave"></span></p>
                 <p class="job-des">I'm a <span class="boldName">Bamidele Badmus</span></p>
                 <p id="home-abt">And I'm a <span id="change-text"></span></p>
                 <p class="bio-home">Crafting user-centric designs is my forte. Let's turn your ideas into captivating web experiences!</p>
                 <div class="btn-div mt-6">
                     <button class="hire-btn text-white px-10 py-3 rounded">HIRE ME</button>
-                    <button class="view-btn px-10 py-3 rounded">VIEW RESUME</button>
+                    <button class="view-btn px-10 py-3 rounded" onclick="openResume()" id="view-btn">VIEW RESUME</button>
                 </div>
                 <div class="socials-div flex gap-6 items-center mt-6">
                     <img src="portfolio images and icon/1656999237linkedin-logo-for-email-signature.webp" class="socials-icon" alt="">
@@ -60,15 +60,16 @@
                     <img src="portfolio images and icon/github.png" class="socials-icon" alt="">
                 </div>
             </div>
-            <div id="rightHome" class="flex-grow w-1/2 pl-6 pt-0">
-                <div class="profile-circle"></div>
-                <img src="portfolio images and icon/firstpix-removebg-preview.png" alt="" class="firstPix">
+            <div class="right-home">
+                <div class="profile-circle">
+                    <img src="portfolio images and icon/1.png" alt="" class="firstPix">
+                </div>
             </div>
         </section>
         <!-- home section ends here -->
         <!-- about section starts here -->
         <section id="about" class="w-full flex justify-between items-start py-20">
-            <div class="left-abt flex-grow">
+            <div class="left-home">
                 <p class="abt-me">About Me</p>
                 <p class="abt-me-tx">
                     I'm Bamidele Badmus and I'm a Web developer based in the United kingdom.
@@ -116,69 +117,106 @@
                     </div>
                 </div>
             </div>
-            <div class="right-abt w-1/2">
-                <img src="portfolio images and icon/WhatsApp Image 2023-08-09 at 12.46.20 PM.jpeg" class="home-img" alt="">
+            <div class="right-home">
+                <div class="profile-circle">
+                    <img src="portfolio images and icon/2.png" class="firstPix" alt="">
+                </div>
             </div>
         </section>
         <!-- about section ends here -->
         <!-- projects section starts here -->
         <section id="projects" class="w-full py-20">
             <p class="abt-me mb-3">Projects</p>
-            <div class="flex items-start flex-wrap justify-center gap-10">
+            <div class="projects-cover flex items-start flex-wrap justify-center gap-10">
                 <div class="projects-container">
-                    <img src="portfolio images and icon/new netflix.jpg" alt="" class="projects-card">
-                    <a href="https://6522ba09a57be43f181a6bfb--shiny-cuchufli-0cf450.netlify.app/">
-                        <div class="image-overlay">
-                            <p class="description">NETFLIX</p>
-                            <p class="description">HTML/CSS</p>
-                        </div>
-                    </a>
-                </div>           
-                <div class="projects-container">
-                    <img src="portfolio images and icon/piggy.png" alt="" class="projects-card">
-                    <a href="https://6522be22d825854157012e06--shiny-cuchufli-0cf450.netlify.app/">
-                        <div class="image-overlay">
-                            <p class="description">PIGGYVEST></p>
-                            <p class="description">HTML/CSS/JS/BS</p>
-                        </div>
-                    </a>
+                    <div class="ribbon">
+                        <span>Responsive</span>
+                    </div>
+                    <div class="project-img">
+                        <img src="portfolio images and icon/new netflix.jpg" alt="" class="projects-card">
+                    </div>
+                    <div class="projects-abt">
+                        <p class="pro-txt">Netflix Landing Page</p>
+                        <p class="pro-txt">Language used: HTML & CSS</p>
+                        <a href="https://6522ba09a57be43f181a6bfb--shiny-cuchufli-0cf450.netlify.app/">
+                            <button class="open-btn px-4 py-1 rounded">Open Link</button>
+                        </a>
+                    </div>
                 </div>
-               <div class="projects-container">
-                    <img src="portfolio images and icon/twitterscreen.png" alt="" class="projects-card">
-                    <a href="https://6522bb0957a00f3d47e992e3--shiny-cuchufli-0cf450.netlify.app/">
-                        <div class="image-overlay">
-                            <p class="description">TWITTER></p>
-                            <p class="description">HTML/CSS</p>
-                        </div>
-                    </a>
-               </div>
-               <div class="projects-container">
-                    <img src="portfolio images and icon/gradecal.png" alt="" class="projects-card">
-                    <a href="https://6522bbe2d825854040012d41--shiny-cuchufli-0cf450.netlify.app/">
-                        <div class="image-overlay">
-                            <p class="description">GRADE CALCULATOR APP</p>
-                            <p class="description">HTML/CSS/JS</p>
-                        </div>
-                    </a>
-               </div>
-               <div class="projects-container">
-                    <img src="portfolio images and icon/instagram.png" alt="" class="projects-card">
-                    <a href="https://6522bc101c0751409262e40b--shiny-cuchufli-0cf450.netlify.app/">
-                        <div class="image-overlay">
-                            <p class="description">INSTAGRAM APP></p>
-                            <p class="description">HTML/CSS/JS</p>
-                        </div>
-                    </a>
-               </div>
-               <div class="projects-container">
-                    <img src="portfolio images and icon/cal.png" alt="" class="projects-card">
-                   <a href="https://6522bc5b5f8889373a583fdb--shiny-cuchufli-0cf450.netlify.app/">
-                        <div class="image-overlay">
-                            <p class="description">CALCULATOR APP></p>
-                            <p class="description">HTML/CSS/jS</p>
-                        </div>
-                   </a>
-               </div>
+                <div class="projects-container">
+                    <div class="ribbon">
+                        <span>Responsive</span>
+                    </div>
+                    <div class="project-img">
+                        <img src="portfolio images and icon/piggy.png" alt="" class="projects-card">
+                    </div>
+                    <div class="projects-abt">
+                        <p class="pro-txt">Piggyvest Clone</p>
+                        <p class="pro-txt">Language used: HTML, CSS & JS</p>
+                        <a href="https://6522ba09a57be43f181a6bfb--shiny-cuchufli-0cf450.netlify.app/">
+                            <button class="open-btn px-4 py-1 rounded">Open Link</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="projects-container">
+                    <div class="ribbon">
+                        <span>Responsive</span>
+                    </div>
+                    <div class="project-img">
+                        <img src="portfolio images and icon/twitterscreen.png" alt="" class="projects-card">
+                    </div>
+                    <div class="projects-abt">
+                        <p class="pro-txt">Twitter Clone</p>
+                        <p class="pro-txt">Language used: HTML & CSS</p>
+                        <a href="https://6522ba09a57be43f181a6bfb--shiny-cuchufli-0cf450.netlify.app/">
+                            <button class="open-btn px-4 py-1 rounded">Open Link</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="projects-container">
+                    <div class="ribbon">
+                        <span>Responsive</span>
+                    </div>
+                    <div class="project-img">
+                        <img src="portfolio images and icon/gradecal.png" alt="" class="projects-card">
+                    </div>
+                    <div class="projects-abt">
+                        <p class="pro-txt">Grade Calculator App</p>
+                        <p class="pro-txt">Language used: HTML, CSS & JS</p>
+                        <a href="https://6522ba09a57be43f181a6bfb--shiny-cuchufli-0cf450.netlify.app/">
+                            <button class="open-btn px-4 py-1 rounded">Open Link</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="projects-container">
+                    <div class="ribbon">
+                        <span>Responsive</span>
+                    </div>
+                    <div class="project-img">
+                        <img src="portfolio images and icon/instagram.png" alt="" class="projects-card">
+                    </div>
+                    <div class="projects-abt">
+                        <p class="pro-txt">Instagram Chat and Profile edit</p>
+                        <p class="pro-txt">Language used: HTML, CSS & JS</p>
+                        <a href="https://6522ba09a57be43f181a6bfb--shiny-cuchufli-0cf450.netlify.app/">
+                            <button class="open-btn px-4 py-1 rounded">Open Link</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="projects-container">
+                    <div class="ribbon">
+                        <span>Responsive</span>
+                    </div>
+                    <div class="project-img">
+                        <img src="portfolio images and icon/cal.png" alt="" class="projects-card">
+                    </div>
+                    <div class="projects-abt">
+                        <p>Calculator</p>
+                        <a href="https://6522ba09a57be43f181a6bfb--shiny-cuchufli-0cf450.netlify.app/">
+                            <button class="open-btn px-4 py-1 rounded">Open Link</button>
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
         <!-- projects section ends here -->
