@@ -35,17 +35,17 @@ let myNav = document.getElementById("nav")
 let close = document.getElementById("close")
 
 function openDropDown() {
-
-    if (myDropDown.style.display === "none") {
+    let dropdownStyle = window.getComputedStyle(myDropDown)
+    if (dropdownStyle.display === "none") {
         myDropDown.style.display = "block"
         myHamburger.style.display = "none"
-        myLogo.style.display = "none"
+        // myLogo.style.display = "none"
         myMoon.style.display = "none"
         myNav.style.padding = "0"
     } else {
         myDropDown.style.display = "none";
         myHamburger.style.display = "block"
-        myLogo.style.display = "block"
+        // myLogo.style.display = "block"
         myMoon.style.display = "block"
     }
 }
@@ -56,15 +56,34 @@ function closeDropDown(){
         myDropDown.style.display = "none"
         myNav.style.padding = "1.5rem 2rem 1.5rem 2rem"
         myHamburger.style.display = "block"
-        myLogo.style.display = "block"
+        // myLogo.style.display = "block"
         myMoon.style.display = "block"
     } else{
         myDropDown.style.display = "block"
     }
 }
+//stop hambruger from showing on big screens
+function keepHamburgerout() {
+    if (window.innerWidth >= 320 && window.innerWidth <= 480) {
+        myHamburger.style.display = "block";
+        myNav.style.padding = "1.5rem 2rem 1.5rem 2rem"
+    } else if(window.innerWidth > 480 && window.innerWidth <= 768) {
+        myHamburger.style.display = "block";
+        myNav.style.padding = "1.5rem"
+    } else{
+        myHamburger.style.display = "none";
+        myNav.style.padding = "1.5rem 5rem 1.5rem 5rem"
+    }
+}
+
+window.addEventListener("resize", keepHamburgerout);
+keepHamburgerout(); 
+
 //open resume
 let viewBtn =document.getElementById("view-btn")
 
 function openResume(){
     window.open("portfolio images and icon/Badmus Tech CV.pdf", "_blank")
 }
+
+//chnage to lightmode

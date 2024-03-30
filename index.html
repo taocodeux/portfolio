@@ -4,56 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Badmus T. Bamidele</title>
-    <link rel="stylesheet" href="myportfolio.css">
     <link rel="stylesheet" href="icofont/icofont.min.css">
     <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="myportfolio.css">
 </head>
 <body class="w-full">
-    <main>
-        <head>
-            <nav class="w-full shadow-md flex justify-between items-center" id="nav">
-                <p class="logo">Tao<span class="colored-logo">Codeux</span></p>
-                <div id="moon">
-                    <i class="icofont-moon bg-white p-2 rounded-full" onclick="changeToDarkMode()"></i>
-                </div>
-                <div class="web-li flex items-center gap-20">
-                    <ul class="flex gap-16">
-                        <li class="nav-li"><a href="#home">Home</a></li>
-                        <li class="nav-li"><a href="#about">About</a></li>
-                        <li class="nav-li"><a href="#projects">Projects</a></li>
-                        <li class="nav-li"><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <!-- mobile nav starts here -->
-                <div class="hamburger" id="hamburger" onclick="openDropDown()">
-                    <i class="icofont-navigation-menu"></i>
-                </div>
-                <p class="close"><i class="icofont-ui-close"></i></p>
-            </nav>
-            <div class="hidden-dd" id="hidden-dd">
-                <span class="close-icon" id="close" onclick="closeDropDown()"><i class="icofont-close"></i></span>
-                <ul>
-                    <li class="hidden-li"><a href="#home">Home</a></li>
-                    <li class="hidden-li"><a href="#about">About</a></li>
-                    <li class="hidden-li"><a href="#projects">Projects</a></li>
-                    <li class="hidden-li"><a href="#contact">Contact</a></li>
+    <main class="main">
+        <nav class="w-full shadow-md flex justify-between items-center" id="nav">
+            <p class="logo">Tao<span class="colored-logo">Codeux</span></p>
+            <div id="moon" onclick="toggleMode()">
+                <i class="icofont-moon bg-white p-2 rounded-full"></i>
+            </div>
+            <div class="web-li flex items-center gap-20">
+                <ul class="flex gap-16">
+                    <li class="nav-li"><a href="#home">Home</a></li>
+                    <li class="nav-li"><a href="#about">About</a></li>
+                    <li class="nav-li"><a href="#projects">Projects</a></li>
+                    <li class="nav-li"><a href="#contact">Contact</a></li>
                 </ul>
             </div>
-        </head>
+            <!-- mobile nav starts here -->
+            <div class="hamburger" id="hamburger" onclick="openDropDown()">
+                <i class="icofont-navigation-menu"></i>
+            </div>
+            <p class="close"><i class="icofont-ui-close"></i></p>
+        </nav>
+        <div class="hidden-dd" id="hidden-dd">
+            <span class="close-icon" id="close" onclick="closeDropDown()"><i class="icofont-close"></i></span>
+            <ul>
+                <li class="hidden-li"><a href="#home">Home</a></li>
+                <li class="hidden-li"><a href="#about">About</a></li>
+                <li class="hidden-li"><a href="#projects">Projects</a></li>
+                <li class="hidden-li"><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
         <!-- nav finished here -->
         <!-- home section starts here -->
-        <section id="home" class="w-full justify-between  items-start">
+        <section id="home" class="w-full justify-between items-start">
             <div class="left-home">
                 <p class="hiya">Hiya!<span class="emoji wave" role="img" aria-label="hand wave"></span></p>
-                <p class="job-des">I'm a <span class="boldName">Bamidele Badmus</span></p>
+                <p class="job-des">I'm <span class="boldName">Bamidele Badmus</span></p>
                 <p id="home-abt">And I'm a <span id="change-text"></span></p>
                 <p class="bio-home">Crafting user-centric designs is my forte. Let's turn your ideas into captivating web experiences!</p>
-                <div class="btn-div mt-6">
-                    <button class="hire-btn text-white px-10 py-3 rounded">HIRE ME</button>
-                    <button class="view-btn px-10 py-3 rounded" onclick="openResume()" id="view-btn">VIEW RESUME</button>
+                <div class="btn-div">
+                    <button class="hire-btn text-white rounded">
+                        <a href="mailto:taofeekatb1@gmail.com">HIRE ME</a>
+                    </button>
+                    <button class="view-btn rounded" onclick="openResume()" id="view-btn">
+                        VIEW RESUME
+                    </button>
                 </div>
-                <div class="socials-div flex gap-6 items-center mt-6">
+                <div class="socials-div flex gap-6 items-center">
                     <img src="portfolio images and icon/1656999237linkedin-logo-for-email-signature.webp" class="socials-icon" alt="">
                     <img src="portfolio images and icon/twitter.png" class="socials-icon" alt="">
                     <img src="portfolio images and icon/tik.png" class="socials-icon" alt="">
@@ -68,7 +70,7 @@
         </section>
         <!-- home section ends here -->
         <!-- about section starts here -->
-        <section id="about" class="w-full flex justify-between items-start py-20">
+        <section id="about" class="w-full py-10 flex justify-between items-start">
             <div class="left-home">
                 <p class="abt-me">About Me</p>
                 <p class="abt-me-tx">
@@ -125,7 +127,7 @@
         </section>
         <!-- about section ends here -->
         <!-- projects section starts here -->
-        <section id="projects" class="w-full py-20">
+        <section id="projects" class="w-full py-10">
             <p class="abt-me mb-3">Projects</p>
             <div class="projects-cover flex items-start flex-wrap justify-center gap-10">
                 <div class="projects-container">
@@ -211,7 +213,8 @@
                         <img src="portfolio images and icon/cal.png" alt="" class="projects-card">
                     </div>
                     <div class="projects-abt">
-                        <p>Calculator</p>
+                        <p class="pro-txt">Calculator</p>
+                        <p class="pro-txt">Language used: HTML, CSS & JS</p>
                         <a href="https://6522ba09a57be43f181a6bfb--shiny-cuchufli-0cf450.netlify.app/">
                             <button class="open-btn px-4 py-1 rounded">Open Link</button>
                         </a>
