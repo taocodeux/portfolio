@@ -489,7 +489,7 @@ footer{
     .right-home{
         /* order: 2; */
         width: 100%;
-        padding-top: 3.5rem;
+        /* padding-top: 3.5rem; */
         /* padding: 3rem 0; */
         /* margin-left: -30px; */
     }
@@ -599,7 +599,9 @@ footer{
     .profile-circle{
         width: 100%; 
         height: auto; 
-        margin: auto;
+        margin: 0 auto;
+        object-fit: cover;
+        /* background-color: blue; */
         /* z-index: -2; */
         /* filter: blur(30px); */
     }
