@@ -62,16 +62,22 @@ function closeDropDown(){
         myDropDown.style.display = "block"
     }
 }
+//to close navli when li is clicked
+document.querySelectorAll('.hidden-li a').forEach(item => {
+    item.addEventListener('click', () => {
+        closeDropDown()
+    })
+})
 //stop hambruger from showing on big screens
 function keepHamburgerout() {
     if (window.innerWidth >= 320 && window.innerWidth <= 480) {
-        myHamburger.style.display = "block";
+        myHamburger.style.display = "block"
         myNav.style.padding = "1.5rem 2rem 1.5rem 2rem"
     } else if(window.innerWidth > 480 && window.innerWidth <= 768) {
-        myHamburger.style.display = "block";
+        myHamburger.style.display = "block"
         myNav.style.padding = "1.5rem"
     } else{
-        myHamburger.style.display = "none";
+        myHamburger.style.display = "none"
         myNav.style.padding = "1.5rem 5rem 1.5rem 5rem"
     }
 }

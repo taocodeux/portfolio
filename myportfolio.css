@@ -11,9 +11,8 @@
     --ashblack: #59605B;
     --lightblack: #313131; 
 }
-.light-mode{
-    background-color: #f9f9f9;
-    color: #333;
+#moon{
+    color: var(--reddishbrown);
 }
 main{
     overflow-x: hidden;
