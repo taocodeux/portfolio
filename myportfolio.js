@@ -26,7 +26,7 @@ function clearLetters(){
 }
 typeLetters()
 
-// block to open the nav dropdown for responsiveness
+// block to open the nav dropdown f\ or responsiveness
 let myDropDown = document.getElementById("hidden-dd")
 let myHamburger = document.getElementById("hamburger")
 let myLogo = document.getElementById("logo")
@@ -78,7 +78,7 @@ function keepHamburgerout() {
         myNav.style.padding = "1.5rem"
     } else{
         myHamburger.style.display = "none"
-        myNav.style.padding = "1.5rem 5rem 1.5rem 5rem"
+        myNav.style.padding = "1.5rem 5rem"
     }
 }
 
@@ -92,4 +92,98 @@ function openResume(){
     window.open("portfolio images and icon/Badmus Tech CV.pdf", "_blank")
 }
 
-//chnage to lightmode
+
+//change to darkmode
+document.addEventListener("DOMContentLoaded", () => {
+    const toggleDarkMode = () => {
+        let myAbout = document.getElementById("about");
+        let myHome = document.getElementById("home");
+        let myContact = document.getElementById("contact");
+        let myProjects = document.getElementById("projects");
+        let hireBtn = document.querySelector(".hire-btn");
+        let viewBtn = document.querySelector(".view-btn");
+        let openBtns = document.querySelectorAll(".open-btn");
+
+        const isDarkMode = !myHome.classList.contains("dark-mode");
+
+        myAbout.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue("--whitesw");
+        myContact.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue("--whitesw");
+        myHome.style.backgroundColor = isDarkMode ? "#000" : getComputedStyle(document.documentElement).getPropertyValue("--ashbg");
+        myProjects.style.backgroundColor = isDarkMode ? "#000" : getComputedStyle(document.documentElement).getPropertyValue("--ashbg");
+
+        // to change back to light mode
+        const elements = [
+            { id: "nav", style: { backgroundColor: isDarkMode ? "#000" : getComputedStyle(document.documentElement).getPropertyValue("--ashbg") } },
+            { id: "moon", style: { backgroundColor: isDarkMode ? getComputedStyle(document.documentElement).getPropertyValue("--ashbg") : getComputedStyle(document.documentElement).getPropertyValue("--lightblack") } },
+            { id: "logo", style: { color: isDarkMode ? getComputedStyle(document.documentElement).getPropertyValue("--reddishbrown") : getComputedStyle(document.documentElement).getPropertyValue("--initial-text-color") } },
+        ];
+        const nav = document.getElementById("nav");
+        if (isDarkMode) {
+            const navShadowColor = getComputedStyle(document.documentElement).getPropertyValue("--reddishbrown");
+            nav.style.boxShadow = `0px 1px 5px ${navShadowColor}`;
+        } else {
+            nav.style.boxShadow = ""; // Remove box shadow in light mode
+        }
+
+        elements.forEach(({ id, style }) => {
+            const element = document.getElementById(id);
+            Object.assign(element.style, style);
+        });
+
+        document.querySelectorAll(".nav-li").forEach(li => {
+            li.style.color = isDarkMode ? getComputedStyle(document.documentElement).getPropertyValue("--reddishbrown") : getComputedStyle(document.documentElement).getPropertyValue("--initial-text-color");
+        });
+
+        const allTextElements = document.querySelectorAll("*");
+        allTextElements.forEach(element => {
+            if (!element.closest('.hire-btn') && !element.closest('.view-btn') && !element.closest('.open-btn')) {
+                element.style.color = isDarkMode ? getComputedStyle(document.documentElement).getPropertyValue("--reddishbrown") : "";
+            }
+        });
+
+        if (isDarkMode) {
+            myAbout.classList.add("dark-mode");
+            myHome.classList.add("dark-mode");
+            myContact.classList.add("dark-mode");
+            myProjects.classList.add("dark-mode");
+            hireBtn.style.color = "#000"; // Change text color of hireBtn
+            viewBtn.style.color = getComputedStyle(document.documentElement).getPropertyValue("--reddishbrown"); // Set original text color of viewBtn to reddish brown
+            viewBtn.addEventListener("mouseenter", () => { // Change text color of viewBtn to black on hover
+                viewBtn.style.color = "#000";
+            });
+            viewBtn.addEventListener("mouseleave", () => { // Change text color of viewBtn back to reddish brown when not hovering
+                viewBtn.style.color = getComputedStyle(document.documentElement).getPropertyValue("--reddishbrown");
+            });
+            openBtns.forEach(openBtn => {
+                openBtn.style.color = getComputedStyle(document.documentElement).getPropertyValue("--reddishbrown"); // Set original text color of openBtns to reddish brown
+                openBtn.addEventListener("mouseenter", () => { // Change text color of openBtns to black on hover
+                    openBtn.style.color = "#000";
+                });
+                openBtn.addEventListener("mouseleave", () => { // Change text color of openBtns back to reddish brown when not hovering
+                    openBtn.style.color = getComputedStyle(document.documentElement).getPropertyValue("--reddishbrown");
+                });
+            });
+        } else {
+            myAbout.classList.remove("dark-mode");
+            myHome.classList.remove("dark-mode");
+            myContact.classList.remove("dark-mode");
+            myProjects.classList.remove("dark-mode");
+            hireBtn.style.color = "";
+            viewBtn.style.color = ""; // Reset text color of viewBtn
+            openBtns.forEach(openBtn => {
+                openBtn.style.color = ""; // Reset text color of openBtns
+            });
+        }
+    };
+
+    document.getElementById("moon").addEventListener("click", toggleDarkMode);
+});
+
+
+
+
+
+
+
+
+
